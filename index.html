@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="BMI Logo" />
+    <h1><i class="fas fa-heartbeat"></i> BMI Calculator</h1>
+
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+    <span class="theme-label">Dark Mode</span>
+
+    <input type="number" id="age" placeholder="Enter Age" />
+    <select id="gender">
+      <option value="">Select Gender</option>
+      <option value="male">👨 Male</option>
+      <option value="female">👩 Female</option>
+      <option value="other">⚧️ Other</option>
+    </select>
+    <input type="number" id="height" placeholder="Enter height (in cm)" />
+    <input type="number" id="weight" placeholder="Enter weight (in kg)" />
+
+    <button class="calculate-btn" onclick="calculateBMI()">Calculate BMI</button>
+    <button class="reset-btn" onclick="resetForm()">Reset</button>
+
+    <div id="result"></div>
+    <div id="emoji"></div>
+    <div id="tip" class="bmi-tip"></div>
+
+    <hr />
+    <button id="toggleHistory" class="history-btn" onclick="toggleHistory()">📜 Show History ▼</button>
+    <div id="historyContainer" style="display: none;">
+      <ul id="history"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
